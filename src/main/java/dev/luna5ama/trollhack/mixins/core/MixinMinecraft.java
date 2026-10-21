@@ -79,7 +79,7 @@ public abstract class MixinMinecraft {
 
     @ModifyVariable(method = "displayGuiScreen", at = @At(value = "STORE", ordinal = 0), ordinal = 0, argsOnly = true)
     public GuiScreen displayGuiScreen$ModifyVariable$STORE(GuiScreen value) {
-        if (MainMenu.INSTANCE.isEnabled()) {
+        if (false) { // vanilla title screen
             return new MainMenu.TrollGuiMainMenu();
         } else {
             return value;

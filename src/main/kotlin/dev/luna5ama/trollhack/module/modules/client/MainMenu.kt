@@ -84,9 +84,7 @@ internal object MainMenu : AbstractModule(
 
     init {
         listener<GuiEvent.Displayed> {
-            if (it.screen is GuiMainMenu) {
-                it.screen = TrollGuiMainMenu()
-            }
+            // vanilla title screen: custom menu replacement disabled
         }
         (TrollGuiMainMenu.Companion).toString()
     }
