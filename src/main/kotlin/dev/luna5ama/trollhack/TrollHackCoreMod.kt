@@ -15,11 +15,10 @@ class TrollHackCoreMod : IFMLLoadingPlugin {
         Mixins.addConfigurations(
             "mixins.troll.core.json",
             "mixins.troll.accessor.json",
-            "mixins.troll.patch.json",
-            "mixins.baritone.json"
+            "mixins.troll.patch.json"
         )
         MixinEnvironment.getDefaultEnvironment().obfuscationContext = "searge"
-        LogManager.getLogger("Troll Hack").info("Troll Hack and Baritone mixins initialised.")
+        LogManager.getLogger("Troll Hack").info("CtrlC4s Hacked Utilities mixins initialised (Baritone is loaded from its own jar).")
     }
 
     override fun injectData(data: Map<String, Any>) {

@@ -256,6 +256,8 @@ val fatjar = tasks.register<Jar>("fatjar") {
     exclude { file ->
         file.name.endsWith("kotlin_module")
             || excludeNames.contains(file.file.nameWithoutExtension)
+            || file.path.startsWith("baritone/")
+            || file.path.startsWith("mixins.baritone")
             || excludeDirs.any { file.path.contains(it) }
     }
 
